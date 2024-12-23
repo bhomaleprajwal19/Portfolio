@@ -3,32 +3,296 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-tac-toe</title>
-    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+    <!-- Link to external font -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <!-- Link to Tailwind CSS from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        .mx-auto {
+            padding-top: 10%;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #000; /* Black background */
+            color: white; /* White text for contrast */
+        }
+        .text-forest-green {
+    color: #4f5d4d; 
+}
+/* Hide horizontal scrollbar */
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.scrollbar-hidden {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
+
+
+
+    </style>
 </head>
+
 <body>
-    <main>
-        <h1>Tic-Tac-Toe</h1>   
-        <div class="msg-container hide">
-            <p id="msg">Winner</p>
-          </div> 
-    <div class="container">
-        <div class="game">
-              <button class="box"></button>
-              <button class="box"></button>
-              <button class="box"></button>   
-              <button class="box"></button>
-              <button class="box"></button>
-              <button class="box"></button>
-              <button class="box"></button>
-              <button class="box"></button>
-              <button class="box"></button>
-        </div> 
+
+    <div class="bg-black">
+        <!-- Header and Navigation Bar -->
+        <header class="absolute inset-x-0 top-0 z-50">
+            <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+                <!-- Logo Section -->
+                <div class="flex lg:flex-1">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-20 w-35" src="logo.png" alt="Logo">
+                        
+                    </a>
+                </div>
+    
+                <!-- Navigation Links (visible on desktop) -->
+                <div class="hidden lg:flex lg:gap-x-12">
+                    <a href="#portfolio" class="text-sm font-semibold leading-6 text-gray-50">Projects</a>
+                    <a href="#technologies" class="text-sm font-semibold leading-6 text-gray-50">Technologies</a>
+                    <a href="#about" class="text-sm font-semibold leading-6 text-gray-50">About</a>
+                    <a href="#contact" class="text-sm font-semibold leading-6 text-gray-50">Contact</a>
+                </div>
+            </nav>
+            
+                </div>
+            
+        </header>
+
+        <!-- Main content -->
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <!-- Background shape (top) -->
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+            <!-- Text and Call-to-action -->
+            <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+                <!-- Main heading and description -->
+                <div class="text-center fade-in">
+                    <!-- <h1 class="text-balance text-4xl font-bold tracking-tight text-gray-50 sm:text-6xl">Hi I am Prajwal Transforming Ideas into Interactive Web Solutions.</h1> -->
+                    <h1 class="text-balance text-4xl font-bold tracking-tight text-gray-50 sm:text-6xl">
+                      Hi I am <span class="text-forest-green">Prajwal</span> Transforming Ideas into Interactive Web Solutions.
+                  </h1>
+                  
+                    <p class="mt-6 text-lg leading-8 text-gray-300">Focused on clean code and modern design, I develop websites that are not only functional but also scalable and easy to maintain.</p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href="#portfolio" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Portfolio</a>
+                        <a href="#about" class="text-sm font-semibold leading-6 text-gray-50">Learn more <span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Background shape (bottom) -->
+            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+                <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="bg-black">
+        <div class="mx-auto max-w-7xl py-32">
+            <h2 class="text-center text-4xl font-bold text-gray-50">My Projects</h2>
+            <p class="mt-4 text-center text-lg text-gray-300">Here are some of my favorite projects that showcase my skills and expertise.</p>
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="overflow-hidden rounded-lg bg-gray-800 shadow-md hover:scale-105 transition-transform">
+                    <img class="h-48 w-full object-cover" src="tic tac toe.png" alt="Project 1">
+                    <div class="p-4">
+                         <a href="https://bhomaleprajwal19.github.io/tic-tac-toe/" class="text-lg font-semibold text-gray-50">Tic-Tac-Toe</a>
+                        <p class="mt-2 text-gray-400">Description of project 1. Brief overview of what was accomplished.</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-lg bg-gray-800 shadow-md hover:scale-105 transition-transform">
+                    <img class="h-48 w-full object-cover" src="coming-soon.webp" alt="Project 2">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-50">Comming Soon</h3>
+                        <p class="mt-2 text-gray-400">Description of project 2. Brief overview of what was accomplished.</p>
+                    </div>
+                </div>
+                <div class="overflow-hidden rounded-lg bg-gray-800 shadow-md hover:scale-105 transition-transform">
+                    <img class="h-48 w-full object-cover" src="coming-soon.webp" alt="Project 3">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold text-gray-50">Comming Soon</h3>
+                        <p class="mt-2 text-gray-400">Description of project 3. Brief overview of what was accomplished.</p>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="bg-black">
+        <div class="mx-auto max-w-7xl py-32">
+            <h2 class="text-center text-4xl font-bold text-gray-50">Technologies</h2>
+            <p class="mt-4 text-center text-lg text-gray-300">I work with a variety of technologies to deliver the best results.</p>
+            <div class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="flex flex-col items-center rounded-lg bg-gray-800 p-6 shadow-md">
+                    <img src="html.png" alt="Technology 1" class="h-24 w-24">
+                    <h3 class="mt-4 text-lg font-semibold text-gray-50">HTML</h3>
+                </div>
+                <div class="flex flex-col items-center rounded-lg bg-gray-800 p-6 shadow-md">
+                    <img src="css-logo.png" alt="Technology 2" class="h-24 w-24">
+                    <h3 class="mt-4 text-lg font-semibold text-gray-50">Css</h3>
+                </div>
+                <div class="flex flex-col items-center rounded-lg bg-gray-800 p-6 shadow-md">
+                    <img src="vecteezy_javascript-logo-png-javascript-icon-transparent-png_27127463.png" alt="Technology 3" class="h-24 w-24">
+                    <h3 class="mt-4 text-lg font-semibold text-gray-50">Java script</h3>
+                </div>
+                <div class="flex flex-col items-center rounded-lg bg-gray-800 p-6 shadow-md">
+                    <img src="Node.js_logo.webp" alt="Technology 4" class="h-24 w-24">
+                    <h3 class="mt-4 text-lg font-semibold text-gray-50">Node.js</h3>
+                </div>
+                <div class="flex flex-col items-center rounded-lg bg-gray-800 p-6 shadow-md">
+                    <img src="sql-database-generic.svg" alt="Technology 5" class="h-24 w-24">
+                    <h3 class="mt-4 text-lg font-semibold text-gray-50">SQL</h3>
+                </div>
+                <!-- Add more technologies as needed -->
+            </div>
+        </div>
+    </section>
+
+
+        <!-- About Section -->
+<section id="about" class="bg-black">
+    <div class="mx-auto max-w-7xl py-10">
+        <h2 class="text-center text-4xl font-bold text-gray-50">About Me</h2>
+        <p class="mt-4 text-center text-lg text-gray-300">
+            I am Prajwal Bhomale, currently in my second year of Engineering in Artificial Intelligence and Data Science
+            at Dr. D.Y. Patil Institute of Management and Research in Akurdi, Pune. As a web developer, I am passionate about creating interactive and user-friendly websites.
+            My interests lie at the intersection of web development and data science,
+            where I enjoy utilizing data-driven approaches to enhance user experiences and create impactful solutions.
+        </p>
     </div>
     
-    <button id=reset>RESET</button>
+    <div class="relative">
+        <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white p-2 rounded-full z-10 prev">
+            ←
+        </button>
+        
+        <div class="flex space-x-4 overflow-x-auto scroll-snap-x snap-mandatory snap-x p-4 certificate-container scrollbar-hidden ">
+            <!-- Certificate Card 1 -->
+            <div class="max-w-sm bg-gray-800 border border-gray-200 flex-none rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                    <img class="rounded-t-lg" src="java cert.jpg" alt="Java Certificate" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-300 dark:text-white">Java Certification</h5>
+                    </a>
+                </div>
+            </div>
 
-    </main>
-    <script src="index.js"></script>
+            <!-- Certificate Card 2 -->
+            <div class="max-w-sm border bg-gray-800 border-gray-200 flex-none rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                    <img class="rounded-t-lg" src="webd cert.jpg" alt="Web Development Certificate" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-300 dark:text-white">Web Development Certification</h5>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Certificate Card 3 -->
+            <div class="max-w-sm  border bg-gray-800 border-gray-200 flex-none rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+                <a href="#">
+                    <img class="rounded-t-lg" src="py cert.png" alt="Python Certificate" />
+                </a>
+                <div class="p-5">
+                    <a href="#">
+                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-300 dark:text-white">Python Certificate</h5>
+                    </a>
+                </div>
+            </div>
+
+           
+        <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10 next">
+            →
+        </button>
+    </div>
+</section>
+
+
+
+    <!-- Contact Section -->
+     <hr>
+    <section id="contact" class="bg-black">
+        <div class="mx-auto max-w-7xl py-1px">
+            <h2 class="text-center text-4xl font-bold text-gray-50">Contact Me</h2>
+            <p class="mt-4 text-center text-lg text-gray-300">Feel free to reach out for collaborations or just to say hi!</p>
+            <form action="https://formspree.io/f/xeoqjgjj" method="POST" class="mt-10 max-w-md mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm text-gray-200">Name</label>
+                    <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border border-gray-600 bg-gray-900 px-3 py-2 text-gray-50 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm text-gray-200">Email</label>
+                    <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border border-gray-600 bg-gray-900 px-3 py-2 text-gray-50 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm text-gray-200">Message</label>
+                    <textarea name="message" id="message" required class="mt-1 block w-full rounded-md border border-gray-600 bg-gray-900 px-3 py-2 text-gray-50 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50"></textarea>
+                </div>
+                <button type="submit" class="rounded-md bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-500">Send</button>
+            </form>
+        </div>
+    </section>
+    <div class="mt-8 text-center">
+      <p class="mt-2">You can also find me on:</p>
+      <div class="mt-4 flex justify-center space-x-4">
+          <a href="https://www.linkedin.com/in/prajwal-bhomale-30811828b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-indigo-500 hover:underline">LinkedIn</a>
+          <a href="#" target="_blank" class="text-indigo-500 hover:underline">GitHub</a>
+          <a href="https://www.instagram.com/bhomale.prajwal.19/" target="_blank" class="text-indigo-500 hover:underline">Instagram</a>
+      </div>
+  </div>
+</div>
+    <footer class="bg-black py-6">
+        <div class="text-center text-gray-400">© 2024 ray technologies. All rights reserved.</div>
+    </footer>
+
 </body>
+<script>
+    const container = document.querySelector('.certificate-container');
+const nextButton = document.querySelector('.next');
+const prevButton = document.querySelector('.prev');zzz
+
+nextButton.addEventListener('click', () => {
+    container.scrollBy({
+        left: 300, // Scroll by 300px to the right
+        behavior: 'smooth'
+    });
+});
+
+prevButton.addEventListener('click', () => {
+    container.scrollBy({
+        left: -300, // Scroll by 300px to the left
+        behavior: 'smooth'
+    });
+});
+
+</script>
 </html>
